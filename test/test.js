@@ -7,8 +7,8 @@ const reduce = require('../')
 const test = require('tap').test
 const assert = require('assert')
 
-test('basics', (t) => {
-  const p = path.join(__dirname, 'basics.xml')
+test('podcasts', (t) => {
+  const p = path.join(__dirname, 'podcasts.xml')
 
   const xml = fs.createReadStream(p)
   const parser = pickup({ eventMode: true })
