@@ -2,13 +2,32 @@
 
 const sanitize = require('sanitize-html')
 
-const allowedTags = [
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'p', 'a', 'ul', 'ol', 'li',
-  'b', 'i', 'strong', 'em', 'code', 'br', 'div', 'pre'
-]
+const opts = {
+  allowedTags: [
+    'a',
+    'br',
+    'p'
+  ],
+  allowedAttributes: {
+    a: ['href']
+  },
+  allowedSchemes: [
+    'http', 'https', 'mailto'
+  ],
+  transformTags: {
+    'div': 'p',
+    'h1': 'p',
+    'h2': 'p',
+    'h3': 'p',
+    'h4': 'p',
+    'h5': 'p',
+    'h6': 'p',
+    'li': 'p',
+    'ol': 'p',
+    'ul': 'p'
+  }
+}
 
-module.exports = function (html) {
-  return sanitize(html, {
-    allowedTags: allowedTags
-  })
+module.exports = (html) => {
+  return sanitize(html.replace(/\s\s+/g, ' '), opts)
 }
