@@ -6,6 +6,7 @@ const opts = {
   allowedTags: [
     'a',
     'br',
+    'h1',
     'p'
   ],
   allowedAttributes: {
@@ -18,12 +19,11 @@ const opts = {
   ],
   transformTags: {
     'div': 'p',
-    'h1': 'p',
-    'h2': 'p',
-    'h3': 'p',
-    'h4': 'p',
-    'h5': 'p',
-    'h6': 'p',
+    'h2': 'h1',
+    'h3': 'h1',
+    'h4': 'h1',
+    'h5': 'h1',
+    'h6': 'h1',
     'li': 'br',
     'ol': 'p',
     'ul': 'p'
