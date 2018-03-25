@@ -10,11 +10,11 @@ const test = require('tap').test
 test('lists', (t) => {
   t.is(
     reduce('<ul><li>a</li><li>b</li><li>c</li></ul>'),
-    '<p><p>a</p><p>b</p><p>c</p></p>'
+    '<p><br />a<br />b<br />c</p>'
   )
   t.is(
     reduce('<ol><li>a</li><li>b</li><li>c</li></ol>'),
-    '<p><p>a</p><p>b</p><p>c</p></p>'
+    '<p><br />a<br />b<br />c</p>'
   )
   t.end()
 })

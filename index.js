@@ -12,7 +12,9 @@ const opts = {
     a: ['href']
   },
   allowedSchemes: [
-    'http', 'https', 'mailto'
+    'http',
+    'https',
+    'mailto'
   ],
   transformTags: {
     'div': 'p',
@@ -22,7 +24,7 @@ const opts = {
     'h4': 'p',
     'h5': 'p',
     'h6': 'p',
-    'li': 'p',
+    'li': 'br',
     'ol': 'p',
     'ul': 'p'
   }
