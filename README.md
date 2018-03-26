@@ -4,6 +4,10 @@ The **html-reduce** [Node.js](http://nodejs.org/) package provides a single func
 
 **html-reduce** is a [sanitize-html](https://github.com/punkave/sanitize-html) configuration.
 
+## Specification
+
+Reduce all HTML to `<h1>`, `<p>`, or `<br />` tags, while retaining newline formatting of HTML and plain text input. Text nodes of ignored tags should be kept.
+
 ## License
 
 [MIT License](https://github.com/michaelnisi/html-reduce/blob/master/LICENSE)
