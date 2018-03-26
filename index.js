@@ -31,5 +31,5 @@ const opts = {
 }
 
 module.exports = (html) => {
-  return sanitize(html.replace(/\s\s+/g, ' '), opts)
+  return sanitize(html, opts)
 }
