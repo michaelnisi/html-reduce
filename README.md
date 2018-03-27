@@ -9,7 +9,8 @@ The **html-reduce** [Node.js](http://nodejs.org/) package provides a single func
 
 ## Specification
 
-Reduce all HTML to `<h1>`, `<p>`, `<a>`, and `<br />`, while retaining newline formatting of HTML and plain text input. Text nodes of ignored tags should be kept.
+Reduce all HTML to `<h1>`, `<p>`, `<a>`, and `<br />`, while retaining newline formatting of HTML and plain text input. Keep
+text of ignored tags.
 
 ## License
 
