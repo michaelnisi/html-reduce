@@ -7,6 +7,12 @@ const pickup = require('pickup')
 const reduce = require('../')
 const test = require('tap').test
 
+test('trim', (t) => {
+  t.is(reduce('  hello   '), 'hello')
+  t.is(reduce('  <p> hello </p>   '), '<p> hello </p>')
+  t.end()
+})
+
 test('lists', (t) => {
   t.is(
     reduce('<ul><li>a</li><li>b</li><li>c</li></ul>'),
@@ -35,7 +41,8 @@ test('podcasts', (t) => {
       const wanted = prev.summary
       const found = reduce(entry.summary)
       t.is(found, wanted)
-      return prev = null
+      prev = null
+      return
     }
     prev = entry
   })

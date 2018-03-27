@@ -18,7 +18,6 @@ const opts = {
     'mailto'
   ],
   transformTags: {
-    'div': 'p',
     'h2': 'h1',
     'h3': 'h1',
     'h4': 'h1',
@@ -31,5 +30,5 @@ const opts = {
 }
 
 module.exports = (html) => {
-  return sanitize(html, opts)
+  return sanitize(html.trim(), opts)
 }
